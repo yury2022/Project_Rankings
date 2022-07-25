@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Рейтинг.Снукер.MainTour</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <br>
+    <br>
+    <a href="addRankings"><b><font color="podcasts">Форма: добавить нового игрока>>></font></b></a>
+    <br>
+    <br>
+    <div style="text-align: center;">
+        <caption><b><font color="blue">Рейтинг игроков по снукеру, Main Tour-2022.Июль</font></b></caption>
+    </div>
+    <table class="table table-striped">
+        <tr text-align="center">
+            <th>id</th>
+            <th>Номер рейтинга</th>
+            <th>Игрок</th>
+            <th>Дата рожения</th>
+            <th>Страна</th>
+            <th>Сумма рейтинга</th>
+            <th>Редактирование</th>
+            <th>Удаление</th>
+        </tr>
+        <tr th:each="rankings : ${ranking}">
+            <td th:text="${rankings.id}"></td>
+            <b> <td align="center" th:text="${rankings.numberRankings}"></td></b>
+            <td th:text="${rankings.namePlayer}"></td>
+            <td th:text="${rankings.dateOfBirth}"></td>
+            <td th:text="${rankings.countryPlayer}"></td>
+            <td align="center" th:text="${rankings.sumRankings}"></td>
+            <td>
+                <a th:href="@{updateRankings(id=${rankings.id})}">Редактировать</a>
+            </td>
+            <td>
+                <a class="text-danger" th:href="@{delete(id=${rankings.id})}">Удалить</a>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

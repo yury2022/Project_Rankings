@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Рейтинг.Добавить данные</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<br>
+<div class="container">
+    <br>
+    <form action="addRankings" method="post">
+        <div style="text-align: center;"><b><font color="blue">Укажите данные игрока</font></b></div>
+        <table width="50%" cellpadding="4" cellspacing="0" border="1" frame="hides" rules="cols"  align="center" >
+            <tr text-align="center">
+                <td align="center" ><b>Наименование</b></td>
+                <td align="center" ><b>Значение</b></td>
+            </tr>
+            <tr>
+                <td valign="top" align="left">Имя игрока</td>
+                <td valign="top" align="center"><input type="text" name="namePlayer"></td>
+            </tr>
+            <tr>
+                <td valign="middle" align="left" >Дата рождения игрока</td>
+                <td valign="middle"  align="center"><input type="date" name="dateOfBirth"></td>
+            </tr>
+            <tr>
+                <td valign="middle" align="left" >Номер рейтинга</td>
+                <td valign="middle"  align="center"><input type="number" name="numberRankings"></td>
+            </tr>
+            <tr>
+                <td valign="middle" align="left" >Страна</td>
+                <td valign="middle"  align="center"><input type="text" name="countryPlayer"></td>
+            </tr>
+            <tr>
+                <td valign="middle" align="left" >Сумма рейтинга</td>
+                <td valign="middle"  align="center"><input type="number" name="sumRankings"></td>
+            </tr>
+            <tr>
+                <td valign="middle" align="left" > <button type="submit">Подтвердите внесенные данные:</button></td>
+                <td valign="middle"  align="center"><button class="btn btn-success" type="submit">Добавить игрока</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

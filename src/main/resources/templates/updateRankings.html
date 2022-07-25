@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Рейтинг.Изменить данные</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <br>
+    <form action="updateRankings" method="post" th:object="${rankings}">
+        <input type="hidden" th:field="*{id}">
+        <div style="text-align: center;"><b><font color="blue">Внесите изменения данных игрока</font></b></div>
+        <table width="50%" cellpadding="4" cellspacing="0" border="1" frame="hides" rules="cols"  align="center" >
+            <tr text-align="center">
+                <td align="center" ><b>Наименование</b></td>
+                <td align="center" ><b>Значение</b></td>
+            </tr>
+            <tr>
+                <td valign="top" align="left">Имя игрока</td>
+                <td valign="top" align="center"><input type="text" name="namePlayer" th:field="*{namePlayer}"></td>
+            </tr>
+            <tr>
+                <td valign="middle" align="left" >Дата рождения игрока</td>
+                <td valign="middle"  align="center"><input type="date" name="dateOfBirth" th:field="*{dateOfBirth}"></td>
+            </tr>
+            <tr>
+                <td valign="middle" align="left" >Номер рейтинга</td>
+                <td valign="middle"  align="center"><input type="number" name="numberRankings" th:field="*{numberRankings}"></td>
+            </tr>
+            <tr>
+                <td valign="middle" align="left" >Страна</td>
+                <td valign="middle"  align="center"><input type="text" name="countryPlayer" th:field="*{countryPlayer}"></td>
+            </tr>
+            <tr>
+                <td valign="middle" align="left" >Сумма рейтинга</td>
+                <td valign="middle"  align="center"><input type="number" name="sumRankings" th:field="*{sumRankings}"></td>
+            </tr>
+            <tr>
+                <td valign="middle" align="left" > <button type="submit">Подтвердите внесенные данные:</button></td>
+                <td valign="middle"  align="center"><button class="btn btn-success" type="submit">Изменить данные игрока</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
